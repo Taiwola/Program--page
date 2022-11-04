@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+body{
+    margin: 0;
+    font-family: "poppins", "sans-serif", "serif";
+}
+
+ul li {
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
+    padding: 1.25rem 2.5rem;
+    background-color: rgb(154, 154, 249);
+}
+
+header nav {
+    justify-self: end;
+}
+
+header nav a {
+    color: #333;
+    margin-left: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+a:hover{
+    opacity: 1;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+article{
+    grid-column: 1 / span 3;
+    padding: 30px;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article h2{
+    font-size: 3.5em;
+    max-width: 50rem;
+}
+
+
+aside{
+    padding: 30px;
+    border-left: 1px solid #ddd;
+}
+
+footer {
+    background-color: rgb(154, 154, 249);
+    padding: 3.125rem 3.125rem;
+}
+
+footer h1 {
+    text-align: center;
+}
+
+/* media query */
+@media screen and (max-width: 980px) {
+    aside, article{
+        grid-column: span 4;
+    }
+
+    aside{
+        border-left: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    article h2 {
+        font-size: 2.5em;
+    }
+}
